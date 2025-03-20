@@ -249,7 +249,7 @@ function displayWinningLine(type, sequence) {
 
 
 // 定数：探索深度（深くすると計算量が増えます）
-const SEARCH_DEPTH = 2; 
+const SEARCH_DEPTH = 3; 
 
 // ----- 状態のクローン/シミュレーション用ヘルパー -----
 function cloneState(state) {
