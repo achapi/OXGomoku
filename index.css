@@ -1,0 +1,68 @@
+body {
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+.board-container {
+	position: relative;
+	display: inline-block;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(9, 50px);
+	grid-template-rows: repeat(9, 50px);
+	position: relative;
+	border: 4px solid black;
+}
+
+.cell {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	font-size: 32px;
+	cursor: pointer;
+	user-select: none;
+	font-weight: bold;
+}
+
+.small-board {
+	position: absolute;
+	width: 156px;
+	height: 156px;
+	border: 4px solid black;
+	box-sizing: border-box;
+	background-color: transparent;
+	pointer-events: none;
+}
+
+.large-mark {
+	font-size: 140px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	pointer-events: none;
+}
+
+.winning-line {
+	position: absolute;
+	height: 3px;
+	background-color: red;
+	transform-origin: 0 0;
+	pointer-events: none;
+	z-index: 10;
+}
+
+.cell.occupied-o {
+	color: red;
+}
+
+.cell.occupied-x {
+	color: black;
+}
