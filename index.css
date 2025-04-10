@@ -48,6 +48,7 @@ body {
 	width: 150px;
 	height: 150px;
 	pointer-events: none;
+	opacity: 0.30;
 }
 
 .winning-line {
