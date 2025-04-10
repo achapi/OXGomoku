@@ -42,15 +42,15 @@ function makeMove(row, col) {
 			break;
 		}
 	}
-	// if (secondLastMove !== null){
-	// 	document.querySelector(`#game-board > div:nth-child(${secondLastMove["row"] * 9 + secondLastMove["col"] + 1})`).style.backgroundColor = "transparent";
-	// }
-	// if (cnt % 2 == 0){
-	// 	document.querySelector(`#game-board > div:nth-child(${row * 9 + col + 1})`).style.backgroundColor = "rgba(0, 128, 0, 0.5)";
-	// } else {
-	// 	document.querySelector(`#game-board > div:nth-child(${row * 9 + col + 1})`).style.backgroundColor = "rgba(255, 128, 0, 0.5)";
-	// }
-	// cnt++;
+	if (secondLastMove !== null){
+		document.querySelector(`#game-board > div:nth-child(${secondLastMove["row"] * 9 + secondLastMove["col"] + 1})`).style.backgroundColor = "transparent";
+	}
+	if (cnt % 2 == 0){
+		document.querySelector(`#game-board > div:nth-child(${row * 9 + col + 1})`).style.backgroundColor = "rgba(0, 128, 0, 0.5)";
+	} else {
+		document.querySelector(`#game-board > div:nth-child(${row * 9 + col + 1})`).style.backgroundColor = "rgba(255, 128, 0, 0.5)";
+	}
+	cnt++;
 	secondLastMove = lastMove;
 	lastMove = {
 		row, col
